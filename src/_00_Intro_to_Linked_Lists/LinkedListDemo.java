@@ -38,7 +38,7 @@ public class LinkedListDemo {
     	l.add(15);
     	Node<Integer> n1 = l.getHead();
     	while (n1 != null) {
-			n1.setValue(n1.getValue() * 2);
+			
 			n1 = n1.getNext();
 		}
     	l.print();
