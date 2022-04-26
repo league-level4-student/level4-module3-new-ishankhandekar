@@ -8,14 +8,24 @@ public class HowManyAreSmallerThanMe {
     /*
      * Given an AVLTree filled with the random numbers from 1 to 20, and a
      * single number within the AVL Tree, figure out how many numbers in the
-     * AVLTree are bigger than the provided number and return the result.
+     * AVLTree are smaller than the provided number and return the result.
      * 
      * You may want to create a helper method to search through the AVLTree and
      * count iteratively or recursively.
      */
 
     public int howManyAreSmallerThanMe(AVLTree<Integer> avlTree, int me) {
-
+    	int counter = 0;
+    	try {
+    		String
+    		while (true) {
+    			avlTree.getRoot().getLeft();
+    			counter++;
+    		}	
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+    	
         return 0;
 
     }

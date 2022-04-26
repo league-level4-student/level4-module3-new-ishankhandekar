@@ -1,6 +1,9 @@
 package _04_Morse_Code;
 
+import javax.swing.JOptionPane;
+
 import _03_Intro_to_Binary_Trees.BinaryTree;
+import _03_Intro_to_Binary_Trees.Node;
 
 public class MorseDecoder {
 
@@ -37,6 +40,7 @@ public class MorseDecoder {
         mcTree.insert(new MorseCode("h", "...."));
         mcTree.insert(new MorseCode("v", "...-"));
         mcTree.insert(new MorseCode("f", "..-."));
+        mcTree.insert(new MorseCode(" ", "..--"));
         mcTree.insert(new MorseCode("l", ".-.."));
         mcTree.insert(new MorseCode("p", ".--."));
         mcTree.insert(new MorseCode("j", ".---"));
@@ -47,7 +51,7 @@ public class MorseDecoder {
         mcTree.insert(new MorseCode("z", "--.."));
         mcTree.insert(new MorseCode("q", "--.-"));
 
-        mcTree.printVertical();
+        //mcTree.printVertical();
 
     }
 
@@ -63,8 +67,20 @@ public class MorseDecoder {
      * english alphabet.
      * 
      */
+    
     void decode() {
-
+    	String morseCode = JOptionPane.showInputDialog("put morse code in here.");
+    	
+    	//String morseCode = "-.-- --- ..- ..-- .- .-. . ..-- .- -- .- --.. .. -. --.";
+    	String[] morseCodeSections = morseCode.split(" ");
+    	String decoded = "";
+    	for (int i = 0; i < morseCodeSections.length; i++) {
+			String section = morseCodeSections[i];
+			Node<MorseCode> letterNode = mcTree.search(new MorseCode(section));
+			String letter = letterNode.getValue().toString();
+			decoded += letter;
+		}
+    	JOptionPane.showMessageDialog(null, "Your morse code decoded is: " + decoded);
     }
 
 }

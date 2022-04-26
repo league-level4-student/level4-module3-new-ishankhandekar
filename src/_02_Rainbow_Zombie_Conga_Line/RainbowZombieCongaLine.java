@@ -139,9 +139,14 @@ public class RainbowZombieCongaLine {
      * color to the end of the line.
      */
     public void rainbowBrains(Zombie dancer) {
-    	engine(dancer);
-    	for (int i = 0; i < 8; i++) {
-			
+    	
+    	if (congaLine.size() > 0) {
+    		engine(dancer);
+		}else {
+			caboose(dancer);
+		}
+    	for (int i = 0; i < ZombieHatColor.values().length; i++) {
+			caboose(new Zombie(ZombieHatColor.values()[i]));
 		}
     }
 

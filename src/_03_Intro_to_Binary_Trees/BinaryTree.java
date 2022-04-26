@@ -24,7 +24,7 @@ public class BinaryTree<T extends Comparable<T>> {
             return null;
 
         } else {
-            System.out.println("FOUND VALUE: " + nodeQuery.getValue());
+            //System.out.println("FOUND VALUE: " + nodeQuery.getValue());
         }
         return nodeQuery;
     }
